@@ -1,6 +1,6 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="zh" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -9,21 +9,21 @@
       
       
       
-        <link rel="canonical" href="https://docs.rsserpent.com/latest/en/deployment/">
+        <link rel="canonical" href="https://docs.rsserpent.com/latest/zh/deployment/deta/">
       
       <link rel="icon" href="https://i.loli.net/2021/07/31/LCsB3u2yInHfwak.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
     
     
       
-        <title>Self-Hosting - RSSerpent Docs</title>
+        <title>使用 Deta.sh 部署 - RSSerpent Docs</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1c75ef36.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.1c75ef36.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -57,7 +57,7 @@
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
   
     
-    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
       <script>var palette=__get("__palette");if(null!==palette&&"object"==typeof palette.color)for(var key in palette.color)document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
@@ -67,8 +67,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#self-hosting" class="md-skip">
-          Skip to content
+        <a href="#使用-detash-部署" class="md-skip">
+          跳转至
         </a>
       
     </div>
@@ -80,7 +80,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="RSSerpent Docs" class="md-header__button md-logo" aria-label="RSSerpent Docs" data-md-component="logo">
+    <a href="../../.." title="RSSerpent Docs" class="md-header__button md-logo" aria-label="RSSerpent Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8z"/></svg>
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Self-Hosting
+              使用 Deta.sh 部署
             
           </span>
         </div>
@@ -139,13 +139,13 @@
             <ul class="md-select__list">
               
                 <li class="md-select__item">
-                  <a href="../.." hreflang="en" class="md-select__link">
+                  <a href="../../.." hreflang="en" class="md-select__link">
                     English
                   </a>
                 </li>
                 
                 <li class="md-select__item">
-                  <a href="../../zh/" hreflang="zh" class="md-select__link">
+                  <a href="../../" hreflang="zh" class="md-select__link">
                     中文
                   </a>
                 </li>
@@ -164,7 +164,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -181,7 +181,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            正在初始化搜索引擎
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -193,7 +193,7 @@
     
       <div class="md-header__source">
         
-<a href="https://github.com/RSSerpent/RSSerpent/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/RSSerpent/RSSerpent/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -227,8 +227,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../" class="md-tabs__link">
-        Introduction
+      <a href="../../" class="md-tabs__link">
+        介绍
       </a>
     </li>
   
@@ -243,8 +243,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../usage/rss/" class="md-tabs__link">
-        Usage
+      <a href="../../usage/rss/" class="md-tabs__link">
+        使用
       </a>
     </li>
   
@@ -261,8 +261,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
-        Deployment
+      <a href="../" class="md-tabs__link md-tabs__link--active">
+        部署
       </a>
     </li>
   
@@ -277,8 +277,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../contribution/core/" class="md-tabs__link">
-        Contribution
+      <a href="../../contribution/core/" class="md-tabs__link">
+        贡献
       </a>
     </li>
   
@@ -293,8 +293,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../plugin/official/" class="md-tabs__link">
-        Plugin
+      <a href="../../plugin/official/" class="md-tabs__link">
+        插件
       </a>
     </li>
   
@@ -321,7 +321,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="RSSerpent Docs" class="md-nav__button md-logo" aria-label="RSSerpent Docs" data-md-component="logo">
+    <a href="../../.." title="RSSerpent Docs" class="md-nav__button md-logo" aria-label="RSSerpent Docs" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 2a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6m0 2h7v5h5v11H6V4m2 8v2h8v-2H8m0 4v2h5v-2H8z"/></svg>
@@ -332,7 +332,7 @@
   
     <div class="md-nav__source">
       
-<a href="https://github.com/RSSerpent/RSSerpent/" title="Go to repository" class="md-source" data-md-component="source">
+<a href="https://github.com/RSSerpent/RSSerpent/" title="前往仓库" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
@@ -362,14 +362,14 @@
       
       
         <label class="md-nav__link" for="__nav_1">
-          Introduction
+          介绍
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Introduction" data-md-level="1">
+      <nav class="md-nav" aria-label="介绍" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Introduction
+          介绍
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -379,8 +379,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        Introduction
+      <a href="../../" class="md-nav__link">
+        介绍
       </a>
     </li>
   
@@ -393,8 +393,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../outline/" class="md-nav__link">
-        Outline
+      <a href="../../outline/" class="md-nav__link">
+        文档结构
       </a>
     </li>
   
@@ -407,8 +407,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        F.A.Q.
+      <a href="../../faq/" class="md-nav__link">
+        常见问题
       </a>
     </li>
   
@@ -438,14 +438,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Usage
+          使用
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Usage" data-md-level="1">
+      <nav class="md-nav" aria-label="使用" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Usage
+          使用
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -455,8 +455,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/rss/" class="md-nav__link">
-        What is RSS?
+      <a href="../../usage/rss/" class="md-nav__link">
+        认识 RSS
       </a>
     </li>
   
@@ -469,8 +469,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/router/" class="md-nav__link">
-        Understanding Routers
+      <a href="../../usage/router/" class="md-nav__link">
+        理解路由
       </a>
     </li>
   
@@ -483,8 +483,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../usage/parameter/" class="md-nav__link">
-        Global Parameters
+      <a href="../../usage/parameter/" class="md-nav__link">
+        全局参数
       </a>
     </li>
   
@@ -516,16 +516,30 @@
       
       
         <label class="md-nav__link" for="__nav_3">
-          Deployment
+          部署
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Deployment" data-md-level="1">
+      <nav class="md-nav" aria-label="部署" data-md-level="1">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
-          Deployment
+          部署
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        自建
+      </a>
+    </li>
+  
+
+            
           
             
               
@@ -542,46 +556,9 @@
         
       
       
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Self-Hosting
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Self-Hosting
+        使用 Deta.sh 部署
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#official-instances" class="md-nav__link">
-    Official Instances
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#--httpswwwrsserpentcom-hosted-on-vercelcom-source" class="md-nav__link">
-    - https://www.rsserpent.com, hosted on vercel.com [source];
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
       
     </li>
   
@@ -594,8 +571,8 @@
   
   
     <li class="md-nav__item">
-      <a href="deta/" class="md-nav__link">
-        Deploy with Deta.sh
+      <a href="../docker/" class="md-nav__link">
+        使用 Docker 部署
       </a>
     </li>
   
@@ -608,22 +585,8 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/" class="md-nav__link">
-        Deploy with Docker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="vercel/" class="md-nav__link">
-        Deploy on Vercel
+      <a href="../vercel/" class="md-nav__link">
+        使用 Vercel 部署
       </a>
     </li>
   
@@ -653,14 +616,14 @@
       
       
         <label class="md-nav__link" for="__nav_4">
-          Contribution
+          贡献
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Contribution" data-md-level="1">
+      <nav class="md-nav" aria-label="贡献" data-md-level="1">
         <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
-          Contribution
+          贡献
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -670,8 +633,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribution/core/" class="md-nav__link">
-        Core
+      <a href="../../contribution/core/" class="md-nav__link">
+        核心
       </a>
     </li>
   
@@ -684,8 +647,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../contribution/plugin/" class="md-nav__link">
-        Plugin
+      <a href="../../contribution/plugin/" class="md-nav__link">
+        插件
       </a>
     </li>
   
@@ -715,14 +678,14 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          Plugin
+          插件
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugin" data-md-level="1">
+      <nav class="md-nav" aria-label="插件" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Plugin
+          插件
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -732,8 +695,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../plugin/official/" class="md-nav__link">
-        Official
+      <a href="../../plugin/official/" class="md-nav__link">
+        官方
       </a>
     </li>
   
@@ -758,34 +721,12 @@
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目录">
   
   
   
     
   
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#official-instances" class="md-nav__link">
-    Official Instances
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#--httpswwwrsserpentcom-hosted-on-vercelcom-source" class="md-nav__link">
-    - https://www.rsserpent.com, hosted on vercel.com [source];
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -797,16 +738,12 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/RSSerpent/RSSerpent/edit/master/docs/deployment/index.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/RSSerpent/RSSerpent/edit/master/docs/deployment/deta.zh.md" title="编辑此页" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
                 
-                <h1 id="self-hosting">Self-Hosting<a class="headerlink" href="#self-hosting" title="Permanent link">&para;</a></h1>
-<p>You are encouraged to self-host an RSSerpent instance.</p>
-<h2 id="official-instances">Official Instances<a class="headerlink" href="#official-instances" title="Permanent link">&para;</a></h2>
-<p>RSSerpent has hosted some official instances. If you believe self-hosting is not a viable option for you, consider using one of the follows:</p>
-<h2 id="--httpswwwrsserpentcom-hosted-on-vercelcom-source">- <a href="https://www.rsserpent.com">https://www.rsserpent.com</a>, hosted on <a href="https://vercel.com/">vercel.com</a> [<a href="https://github.com/RSSerpent/rsserpent-deploy-vercel">source</a>];<a class="headerlink" href="#--httpswwwrsserpentcom-hosted-on-vercelcom-source" title="Permanent link">&para;</a></h2>
+                <h1 id="使用-detash-部署">使用 Deta.sh 部署<a class="headerlink" href="#使用-detash-部署" title="Permanent link">&para;</a></h1>
                 
                   
                     
@@ -815,7 +752,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-10-04
+      最后更新: 2021-10-04
     
   </small>
 </div>
@@ -844,29 +781,29 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../usage/parameter/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Global Parameters" rel="prev">
+        <a href="../" class="md-footer__link md-footer__link--prev" aria-label="上一页: 自建" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Previous
+                上一页
               </span>
-              Global Parameters
+              自建
             </div>
           </div>
         </a>
       
       
         
-        <a href="deta/" class="md-footer__link md-footer__link--next" aria-label="Next: Deploy with Deta.sh" rel="next">
+        <a href="../docker/" class="md-footer__link md-footer__link--next" aria-label="下一页: 使用 Docker 部署" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                下一页
               </span>
-              Deploy with Deta.sh
+              使用 Docker 部署
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -919,10 +856,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["header.autohide", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["header.autohide", "navigation.tabs", "navigation.top"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.e99e714c.min.js", "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c7d1b464.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c7d1b464.min.js"></script>
       
     
   </body>
