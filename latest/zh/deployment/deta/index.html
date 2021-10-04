@@ -556,9 +556,67 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          使用 Deta.sh 部署
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         使用 Deta.sh 部署
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#注册" class="md-nav__link">
+    注册
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#访问令牌" class="md-nav__link">
+    访问令牌
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#使用模板" class="md-nav__link">
+    使用模板
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#添加插件" class="md-nav__link">
+    添加插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#成功运行-" class="md-nav__link">
+    成功运行 🎉
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -728,6 +786,49 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#注册" class="md-nav__link">
+    注册
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#访问令牌" class="md-nav__link">
+    访问令牌
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#使用模板" class="md-nav__link">
+    使用模板
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#添加插件" class="md-nav__link">
+    添加插件
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#成功运行-" class="md-nav__link">
+    成功运行 🎉
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -744,6 +845,64 @@
                 
                 
                 <h1 id="使用-detash-部署">使用 Deta.sh 部署<a class="headerlink" href="#使用-detash-部署" title="Permanent link">&para;</a></h1>
+<p>本教程将帮助你学会如何使用 <a href="https://www.deta.sh/">deta.sh</a> 免费自建 RSSerpent 实例。</p>
+<h2 id="注册">注册<a class="headerlink" href="#注册" title="Permanent link">&para;</a></h2>
+<p>你首先需要注册 <a href="https://www.deta.sh/">deta.sh</a> 账户才能进行部署：</p>
+<ol>
+<li>打开 <a href="https://web.deta.sh">https://web.deta.sh</a> 并注册；</li>
+<li>填写<em>用户名</em>，<em>密码</em>和<em>邮箱地址</em>；</li>
+<li>打开邮箱，点击确认邮件。</li>
+</ol>
+<p>如果你已有账户，跳过这一步直接登录即可。</p>
+<h2 id="访问令牌">访问令牌<a class="headerlink" href="#访问令牌" title="Permanent link">&para;</a></h2>
+<p>你需要创建一个 <a href="https://www.deta.sh/">deta.sh</a> 访问令牌（access token），然后 RSSerpent 会帮助你完成剩下的事。</p>
+<ol>
+<li>打开你的个人主页 <code>https://web.deta.sh/home/{username}/</code>；</li>
+<li>点击 <em>Settings</em> 设置标签页，然后点击 <em>Create Token</em> 按钮创建令牌；</li>
+<li>将生成的访问令牌拷贝到你的剪贴板。</li>
+</ol>
+<p>如果你对访问令牌有任何疑虑，请阅读 Deta 的<a href="https://docs.deta.sh/docs/cli/auth">文档</a>。</p>
+<h2 id="使用模板">使用模板<a class="headerlink" href="#使用模板" title="Permanent link">&para;</a></h2>
+<p>RSSerpent 为用户提供了 <a href="https://www.deta.sh/">deta.sh</a> 部署模板，你可以用模板快速完成部署。假设你已经开通 <a href="https://github.com/">GitHub</a> 账户：</p>
+<ol>
+<li>在 GitHub 上打开<a href="https://github.com/RSSerpent/rsserpent-deploy-deta">模板</a>；</li>
+<li>点击绿色的 <em>Use this template</em> 按钮使用模板。</li>
+</ol>
+<p>GitHub 会提示你一些信息，然后就会（基于模板）为你创建一个代码仓库。</p>
+<ol>
+<li>打开你仓库的 <em>Settings</em> 设置标签页；</li>
+<li>找到 <em>Secrets</em>，点击 <em>New repository secret</em> 按钮新建密钥;</li>
+<li>密钥名字为 <em>DETA_TOKEN</em>，密钥内容就是你刚才创建的 <a href="https://www.deta.sh/">deta.sh</a> 访问令牌.</li>
+</ol>
+<p>GitHub 会使用你的访问令牌来自动将你的 RSSerpent 实例部署到 <a href="https://www.deta.sh/">deta.sh</a> 上。</p>
+<h2 id="添加插件">添加插件<a class="headerlink" href="#添加插件" title="Permanent link">&para;</a></h2>
+<p>默认的模板功能并不丰富，你需要将添加你需要的 RSSerpent 插件到 <code>rsserpent.txt</code> 文件中。你可以使用 <code>git</code> 将仓库克隆本地进行编辑，或者你也可以使用 GitHub 网页进行编辑。</p>
+<p>编写 <code>rsserpent.txt</code> 时的一些注意事项：</p>
+<ul>
+<li>编写 <code>rsserpent.txt</code> 和为任何 Python 项目编写 <code>requirements.txt</code> 是一样的；</li>
+<li>不要修改 <code>requirements.txt</code>，你只应该修改 <code>rsserpent.txt</code>。GitHub Actions 会负责自动更新你的 <code>requirements.txt</code> 并部署实例；</li>
+<li>每周一次，或者每次你修改仓库内容并提交时，会进行自动更新/部署；</li>
+<li>我们推荐你在 <code>rsserpent.txt</code> 中不要指定依赖项的版本，这样 <a href="https://github.com/features/actions">GitHub Actions</a> 能帮助你自动将依赖更新到最新版；</li>
+</ul>
+<pre><code># PyPI
+rsserpent
+# Git
+rsserpent-plugin-bilibili @ git+https://github.com/RSSerpent/rsserpent-plugin-bilibili.git
+</code></pre>
+<ul>
+<li>如果你确认你需要使用某个特定版本（而非最新）的依赖，你可以：</li>
+</ul>
+<pre><code># PyPI
+rsserpent==0.1.4
+# Git
+rsserpent-plugin-bilibili @ git+https://github.com/RSSerpent/rsserpent-plugin-bilibili.git@0609c0bd466e5d19fbb13078d9b93e0134b8c5bd
+</code></pre>
+<h2 id="成功运行-">成功运行 🎉<a class="headerlink" href="#成功运行-" title="Permanent link">&para;</a></h2>
+<ol>
+<li>打开你的代码仓库 --&gt; <em>Actions</em> 标签页 --&gt; <em>Update</em>，点击 <em>Run workflow</em> 按钮来手动触发一次部署；</li>
+<li>打开你的 <a href="https://www.deta.sh/">deta.sh</a> 个人主页 --&gt; <em>default</em> 项目 --&gt; <em>Micros</em> 标签页，选择 <em>rsserpent</em>，你就能在页面右上角看到你实例的域名（类似 <em>https://xxxxxx.deta.dev/</em>）。</li>
+</ol>
+<p>在浏览器中打开该域名。如果你看到“Welcome to RSSerpent!”这个欢迎信息，那么恭喜你，你已经部署成功了！</p>
                 
                   
                     
