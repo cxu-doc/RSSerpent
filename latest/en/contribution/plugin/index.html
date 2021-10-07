@@ -874,11 +874,6 @@ scoop install python
 </div>
 </div>
 </div>
-<p>Run in your terminal to check Python version:
-<div class="highlight"><pre><span></span><code>python -V
-<span class="c1"># or</span>
-python3 -V
-</code></pre></div></p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>If you need to manage multiple versions of Python on your system, checkout <a href="https://github.com/pyenv/pyenv">pyenv</a>.</p>
@@ -891,11 +886,11 @@ python3 -V
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Unix</label><label for="__tabbed_2_2">Windows</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
+<div class="highlight"><pre><span></span><code>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py <span class="p">|</span> python -
 </code></pre></div>
 </div>
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="o">(</span>Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing<span class="o">)</span>.Content <span class="p">|</span> python -
+<div class="highlight"><pre><span></span><code><span class="o">(</span>Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py -UseBasicParsing<span class="o">)</span>.Content <span class="p">|</span> python -
 </code></pre></div>
 </div>
 </div>
@@ -912,7 +907,7 @@ sudo apt install cookiecutter
 <p>Make sure you have <a href="https://git-scm.com/">git</a> installed too.</p>
 </div>
 <h2 id="scaffold">Scaffold<a class="headerlink" href="#scaffold" title="Permanent link">&para;</a></h2>
-<p>Now it's time to start you project! In your terminal, run:</p>
+<p>Now it's time to scaffold you project! In your terminal, start a new session and run:</p>
 <div class="highlight"><pre><span></span><code>cookiecutter gh:rsserpent/template
 </code></pre></div>
 <p>This will download the official RSSerpent plugin <a href="https://github.com/RSSerpent/template">template</a> from GitHub. You will then be prompted to fill in some information:</p>
@@ -923,10 +918,10 @@ link [https://github.com/queensferryme]:
 email [queensferryme@example.com]:
 </code></pre></div>
 <p>The message between the brackets <code>[...]</code> are default values for respective fields, you may press <code>Enter</code> to accept or type in your own choice. You personal information (<em>email</em> etc.) will only be used for rendering the template. You could always remain anonymous if you'd like to.</p>
-<p>After that, we'll automatically create a directory (named <em>rsserpent-plugin-xxx</em>) with all the necessary project configurations for you. We will also install dependencies (through <code>poetry</code>) and <a href="https://pre-commit.com/">pre-commit</a> hooks for you, which may take minutes depending on your network connection.</p>
+<p>After that, we'll automatically create a directory <code>rsserpent-plugin-xxx/</code> with all the necessary project configurations for you. We will also install project dependencies (through <code>poetry</code>) and <a href="https://pre-commit.com/">pre-commit</a> hooks, which may take minutes depending on your network connection.</p>
 <h2 id="develop">Develop<a class="headerlink" href="#develop" title="Permanent link">&para;</a></h2>
-<p>You will need a IDE to start developing. We recommend using <a href="https://code.visualstudio.com/">Visual Studio Code</a>, or VSCode for short. Use VSCode to open the directory you just created using <code>cookiecutter</code>. You may be prompted to install some recommended plugins.</p>
-<p>The major part of an RSSerpent plugin is a collection of <a href="../../usage/router/">routers</a>, and each router is a <code>path</code> string accompanied by a data <code>provider</code> function.</p>
+<p>You will need a <a href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a> to start developing. We recommend using <a href="https://code.visualstudio.com/">Visual Studio Code</a>, or VSCode for short. Use VSCode to open the directory you just created using <code>cookiecutter</code>. You may be prompted to install some recommended VSCode plugins.</p>
+<p>An RSSerpent plugin is mostly a collection of <a href="../../usage/router/">routers</a>, and each router is a <code>path</code> string accompanied by a data <code>provider</code> function.</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
 
 
@@ -941,6 +936,14 @@ email [queensferryme@example.com]:
         <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Title&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Description&quot;</span><span class="p">}],</span>
     <span class="p">}</span>
 </code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>See more example routers <a href="https://github.com/RSSerpent/RSSerpent/tree/master/rsserpent/plugins/builtin">here</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The <code>provider</code> function must be <strong>async</strong> and can <strong>not</strong> have <a href="https://docs.python.org/3/faq/programming.html#faq-positional-only-arguments">position-only arguments</a>.</p>
+</div>
 <p>The <code>path</code> variable defines an endpoint where users could access the RSS feed, and the <code>provider</code> function provides necessary data for rendering and serving the RSS feed to users. You will also need to register you routers in <code>rsserpent_plugin_xxx/__init__.py</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">route1</span><span class="p">,</span> <span class="n">route2</span><span class="p">,</span> <span class="n">route3</span>
 
@@ -956,7 +959,7 @@ email [queensferryme@example.com]:
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Poetry install dependencies inside a <a href="https://virtualenv.pypa.io/">virtualenv</a>, so you will need to run <code>poetry shell</code> or <code>source $(poetry env info -p)/bin/activate</code> to activate the virtual environment.</p>
+<p>Poetry install dependencies inside a <a href="https://virtualenv.pypa.io/">virtualenv</a>. Therefore, in order to use tools like <code>pre-commit</code>, <code>pytest</code> or <code>uvicorn</code>, you will need to run <code>poetry shell</code> or <code>source $(poetry env info -p)/bin/activate</code> to activate the virtual environment.</p>
 </div>
 <p>Run <code>uvicorn --reload rsserpent:app</code> in your terminal to start an RSSerpent instance locally, so that you can see if you plugin works as expected.</p>
 <div class="highlight"><pre><span></span><code>➜ uvicorn --reload rsserpent:app
@@ -975,13 +978,13 @@ INFO:     Application startup complete.
 <p>After you made enough changes to the plugin locally, make sure to commit your changes and push to GitHub. In this way, you can make you latest work available to plugin users.</p>
 <div class="highlight"><pre><span></span><code>git add --all
 git commit -m <span class="s2">&quot;&lt;type&gt;: &lt;description&gt;&quot;</span>
-git push origin master
+git push origin
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Commit messages should be in accordance with the <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.</p>
+<p>Commit messages should be in accordance with the <a href="https://www.conventionalcommits.org/">Conventional Commits</a> specification.</p>
 </div>
-<p>When you run <code>git commit</code>, a set of <code>pre-commit</code> hooks will be automatically triggered. Make sure you pass the checks before actually pushing to GitHub. You could also run the checks manually:</p>
+<p>When you run <code>git commit</code>, a set of <code>pre-commit</code> hooks will be triggered. Make sure you pass the checks before actually pushing to GitHub. You could also run the checks manually:</p>
 <div class="highlight"><pre><span></span><code>➜ pre-commit run --all-files
 Nitpick Check............................................................Passed
 Fix End of Files.........................................................Passed
