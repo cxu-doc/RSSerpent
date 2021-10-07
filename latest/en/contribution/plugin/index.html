@@ -660,9 +660,60 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Plugin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Plugin
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up" class="md-nav__link">
+    Set Up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaffold" class="md-nav__link">
+    Scaffold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop" class="md-nav__link">
+    Develop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish" class="md-nav__link">
+    Publish
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -742,6 +793,42 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#set-up" class="md-nav__link">
+    Set Up
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scaffold" class="md-nav__link">
+    Scaffold
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#develop" class="md-nav__link">
+    Develop
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#publish" class="md-nav__link">
+    Publish
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -758,6 +845,161 @@
                 
                 
                 <h1 id="plugin">Plugin<a class="headerlink" href="#plugin" title="Permanent link">&para;</a></h1>
+<h2 id="set-up">Set Up<a class="headerlink" href="#set-up" title="Permanent link">&para;</a></h2>
+<p>RSSerpent is written in the <a href="https://www.python.org">Python</a> programming language. You must have a valid Python (&gt;= 3.6.2, &lt; 3.10) installation on your system in order to get RSSerpent up &amp; run. The most universal way to install Python is to grab a installer from the official Python <a href="https://www.python.org/downloads/">download page</a>. An alternative approach is to install via a package manager:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Arch</span>
+sudo pacman -S python
+<span class="c1"># Debian/Ubuntu</span>
+sudo apt update
+sudo apt install python3 python3-pip
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Homebrew</span>
+brew install python
+<span class="c1"># MacPorts</span>
+sudo port selfupdate
+sudo port install python
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="c1"># Chocolatey</span>
+choco install python
+<span class="c1"># Scoop</span>
+scoop install python
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>Run in your terminal to check Python version:
+<div class="highlight"><pre><span></span><code>python -V
+<span class="c1"># or</span>
+python3 -V
+</code></pre></div></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If you need to manage multiple versions of Python on your system, checkout <a href="https://github.com/pyenv/pyenv">pyenv</a>.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Currently RSSerpent does <strong>not</strong> support Python 3.10.</p>
+</div>
+<p><a href="https://python-poetry.org/">Poetry</a> is a modern Python packaging and dependency management tool and is used by RSSerpent. Install <code>poetry</code> with:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Unix</label><label for="__tabbed_2_2">Windows</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py <span class="p">|</span> python -
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="o">(</span>Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py -UseBasicParsing<span class="o">)</span>.Content <span class="p">|</span> python -
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>You will also need <a href="https://cookiecutter.readthedocs.io/en/stable/installation.html">cookiecutter</a> for quickly scaffolding an RSSerpent plugin, by using the official plugin <a href="https://github.com/RSSerpent/template">template</a>.</p>
+<div class="highlight"><pre><span></span><code>pip install --user cookiecutter
+<span class="c1"># or on macOS</span>
+brew install cookiecutter
+<span class="c1"># or on Debian/Ubuntu</span>
+sudo apt install cookiecutter
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you have <a href="https://git-scm.com/">git</a> installed too.</p>
+</div>
+<h2 id="scaffold">Scaffold<a class="headerlink" href="#scaffold" title="Permanent link">&para;</a></h2>
+<p>Now it's time to start you project! In your terminal, run:</p>
+<div class="highlight"><pre><span></span><code>cookiecutter gh:rsserpent/template
+</code></pre></div>
+<p>This will download the official RSSerpent plugin <a href="https://github.com/RSSerpent/template">template</a> from GitHub. You will then be prompted to fill in some information:</p>
+<div class="highlight"><pre><span></span><code>plugin [rsserpent-plugin-xxx]:
+description [An rsserpent plugin for xxx.]:
+username [queensferryme]:
+link [https://github.com/queensferryme]:
+email [queensferryme@example.com]:
+</code></pre></div>
+<p>The message between the brackets <code>[...]</code> are default values for respective fields, you may press <code>Enter</code> to accept or type in your own choice. You personal information (<em>email</em> etc.) will only be used for rendering the template. You could always remain anonymous if you'd like to.</p>
+<p>After that, we'll automatically create a directory (named <em>rsserpent-plugin-xxx</em>) with all the necessary project configurations for you. We will also install dependencies (through <code>poetry</code>) and <a href="https://pre-commit.com/">pre-commit</a> hooks for you, which may take minutes depending on your network connection.</p>
+<h2 id="develop">Develop<a class="headerlink" href="#develop" title="Permanent link">&para;</a></h2>
+<p>You will need a IDE to start developing. We recommend using <a href="https://code.visualstudio.com/">Visual Studio Code</a>, or VSCode for short. Use VSCode to open the directory you just created using <code>cookiecutter</code>. You may be prompted to install some recommended plugins.</p>
+<p>The major part of an RSSerpent plugin is a collection of <a href="../../usage/router/">routers</a>, and each router is a <code>path</code> string accompanied by a data <code>provider</code> function.</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Any</span><span class="p">,</span> <span class="n">Dict</span>
+
+
+<span class="n">path</span> <span class="o">=</span> <span class="s2">&quot;/path/to/route&quot;</span>
+
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">provider</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="n">Any</span><span class="p">]:</span>
+    <span class="k">return</span> <span class="p">{</span>
+        <span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Example&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;link&quot;</span><span class="p">:</span> <span class="s2">&quot;https://example.com&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;An example rsserpent plugin.&quot;</span><span class="p">,</span>
+        <span class="s2">&quot;items&quot;</span><span class="p">:</span> <span class="p">[{</span><span class="s2">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Title&quot;</span><span class="p">,</span> <span class="s2">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;Example Description&quot;</span><span class="p">}],</span>
+    <span class="p">}</span>
+</code></pre></div>
+<p>The <code>path</code> variable defines an endpoint where users could access the RSS feed, and the <code>provider</code> function provides necessary data for rendering and serving the RSS feed to users. You will also need to register you routers in <code>rsserpent_plugin_xxx/__init__.py</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">route1</span><span class="p">,</span> <span class="n">route2</span><span class="p">,</span> <span class="n">route3</span>
+
+
+<span class="n">plugin</span> <span class="o">=</span> <span class="n">Plugin</span><span class="p">(</span>
+    <span class="c1"># ...</span>
+    <span class="n">routers</span><span class="o">=</span><span class="p">{</span>
+        <span class="n">route1</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">route1</span><span class="o">.</span><span class="n">provider</span><span class="p">,</span>
+        <span class="n">route2</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">route2</span><span class="o">.</span><span class="n">provider</span><span class="p">,</span>
+        <span class="n">route3</span><span class="o">.</span><span class="n">path</span><span class="p">:</span> <span class="n">route3</span><span class="o">.</span><span class="n">provider</span><span class="p">,</span>
+    <span class="p">},</span>
+<span class="p">)</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Poetry install dependencies inside a <a href="https://virtualenv.pypa.io/">virtualenv</a>, so you will need to run <code>poetry shell</code> or <code>source $(poetry env info -p)/bin/activate</code> to activate the virtual environment.</p>
+</div>
+<p>Run <code>uvicorn --reload rsserpent:app</code> in your terminal to start an RSSerpent instance locally, so that you can see if you plugin works as expected.</p>
+<div class="highlight"><pre><span></span><code>➜ uvicorn --reload rsserpent:app
+INFO:     Will watch for changes in these directories: [&#39;/path/to/your/directory&#39;]
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [30920] using statreload
+INFO:     Started server process [30922]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We recommend plugin authors to write tests, so that the plugin can be more robust and have less bugs. Write your tests in the <code>tests/</code> directory and run <code>pytest</code> to run the tests.</p>
+</div>
+<h2 id="publish">Publish<a class="headerlink" href="#publish" title="Permanent link">&para;</a></h2>
+<p>After you made enough changes to the plugin locally, make sure to commit your changes and push to GitHub. In this way, you can make you latest work available to plugin users.</p>
+<div class="highlight"><pre><span></span><code>git add --all
+git commit -m <span class="s2">&quot;&lt;type&gt;: &lt;description&gt;&quot;</span>
+git push origin master
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Commit messages should be in accordance with the <a href="https://www.conventionalcommits.org/">Conventional Commits</a>.</p>
+</div>
+<p>When you run <code>git commit</code>, a set of <code>pre-commit</code> hooks will be automatically triggered. Make sure you pass the checks before actually pushing to GitHub. You could also run the checks manually:</p>
+<div class="highlight"><pre><span></span><code>➜ pre-commit run --all-files
+Nitpick Check............................................................Passed
+Fix End of Files.........................................................Passed
+Trim Trailing Whitespace.................................................Passed
+Check Blanket &quot;#noqa&quot;....................................................Passed
+Check Blanket &quot;#type:ignore&quot;.............................................Passed
+Upgrade Python Syntax....................................................Passed
+Check Typos..............................................................Passed
+Format Source Code.......................................................Passed
+Sort Imports.............................................................Passed
+Type Check...............................................................Passed
+Lint.....................................................................Passed
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In <code>pre-commit</code> hooks we run <a href="https://github.com/psf/black">black</a>, <a href="https://github.com/pycqa/isort">isort</a> for source code formatting, <a href="https://github.com/python/mypy">mypy</a> for type checking, and <a href="https://github.com/PyCQA/flake8">flake8</a> for linting.
+We also run <a href="https://github.com/andreoliwa/nitpick"><strong>nitpick</strong></a>, which contains a set of recommended <a href="https://github.com/RSSerpent/RSSerpent/blob/master/styles/main.toml">configurations</a> for black/isort/mypy/flake8 etc from the upstream.</p>
+</div>
                 
                   
                     
@@ -766,7 +1008,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: 2021-07-07
+      Last update: 2021-10-07
     
   </small>
 </div>
