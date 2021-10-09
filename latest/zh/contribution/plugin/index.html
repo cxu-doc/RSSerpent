@@ -277,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../core/" class="md-tabs__link md-tabs__link--active">
+      <a href="../environment/" class="md-tabs__link md-tabs__link--active">
         贡献
       </a>
     </li>
@@ -637,6 +637,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../environment/" class="md-nav__link">
+        环境
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../core/" class="md-nav__link">
         核心
       </a>
@@ -682,13 +696,6 @@
       目录
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#安装工具" class="md-nav__link">
-    安装工具
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#搭建项目" class="md-nav__link">
@@ -800,13 +807,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#安装工具" class="md-nav__link">
-    安装工具
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#搭建项目" class="md-nav__link">
     搭建项目
   </a>
@@ -845,68 +845,14 @@
                 
                 
                 <h1 id="插件">插件<a class="headerlink" href="#插件" title="Permanent link">&para;</a></h1>
-<h2 id="安装工具">安装工具<a class="headerlink" href="#安装工具" title="Permanent link">&para;</a></h2>
-<p>RSSerpent 使用 <a href="https://www.python.org">Python</a> 编程语言编写。因此，你需要在你的系统上安装 Python（&gt;= 3.6.2，&lt; 3.10）才能运行 RSSerpent。最通用的 Python 安装方式就是到 Python 官方<a href="https://www.python.org/downloads/">下载页面</a>去下载一个安装包。当然，你也可以通过包管理器来安装：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Linux</label><label for="__tabbed_1_2">macOS</label><label for="__tabbed_1_3">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Arch</span>
-sudo pacman -S python
-<span class="c1"># Debian/Ubuntu</span>
-sudo apt update
-sudo apt install python3 python3-pip
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Homebrew</span>
-brew install python
-<span class="c1"># MacPorts</span>
-sudo port selfupdate
-sudo port install python
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="c1"># Chocolatey</span>
-choco install python
-<span class="c1"># Scoop</span>
-scoop install python
-</code></pre></div>
-</div>
-</div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>如果你需要在系统上安装多个 Python 版本，请考虑使用 <a href="https://github.com/pyenv/pyenv">pyenv</a>。</p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>目前 RSSerpent <strong>尚不</strong>支持 Python 3.10。</p>
-</div>
-<p><a href="https://python-poetry.org/">Poetry</a> 是一个现代化的 Python 打包和依赖管理工具，RSSerpent 目前使用 Poetry 来管理项目依赖。请使用如下命令安装 Poetry：</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Unix</label><label for="__tabbed_2_2">Windows</label></div>
-<div class="tabbed-content">
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code>curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py <span class="p">|</span> python -
-</code></pre></div>
-</div>
-<div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><span class="o">(</span>Invoke-WebRequest -Uri https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py -UseBasicParsing<span class="o">)</span>.Content <span class="p">|</span> python -
-</code></pre></div>
-</div>
-</div>
-</div>
-<p>你还需要安装 <a href="https://cookiecutter.readthedocs.io/en/stable/installation.html">cookiecutter</a>，以便能使用官方插件<a href="https://github.com/RSSerpent/template">模板</a>来快速搭建一个 RSSerpent 插件项目。</p>
+<h2 id="搭建项目">搭建项目<a class="headerlink" href="#搭建项目" title="Permanent link">&para;</a></h2>
+<p>首先，你需要安装 <a href="https://cookiecutter.readthedocs.io/en/stable/installation.html">cookiecutter</a>，以便能使用官方插件<a href="https://github.com/RSSerpent/template">模板</a>来快速搭建一个 RSSerpent 插件项目。</p>
 <div class="highlight"><pre><span></span><code>pip install --user cookiecutter
 <span class="c1"># or on macOS</span>
 brew install cookiecutter
 <span class="c1"># or on Debian/Ubuntu</span>
 sudo apt install cookiecutter
 </code></pre></div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>确保你的系统上也安装了 <a href="https://git-scm.com/">git</a>。</p>
-</div>
-<h2 id="搭建项目">搭建项目<a class="headerlink" href="#搭建项目" title="Permanent link">&para;</a></h2>
 <p>现在可以开始搭建项目了！在你的终端里，打开一个新的会话页面并执行：</p>
 <div class="highlight"><pre><span></span><code>cookiecutter gh:rsserpent/template
 </code></pre></div>
@@ -1003,6 +949,10 @@ Lint.....................................................................Passed
 <p>我们在 <code>pre-commit</code> 钩子中运行了 <a href="https://github.com/psf/black">black</a>/<a href="https://github.com/pycqa/isort">isort</a> 代码格式化, <a href="https://github.com/python/mypy">mypy</a> 类型检查，以及 <a href="https://github.com/PyCQA/flake8">flake8</a> 代码风格检查。
 我们还运行了 <a href="https://github.com/andreoliwa/nitpick"><strong>nitpick</strong></a> 这个钩子：它包含了一系列 RSSerpent 官方推荐的 black/isort/mypy/flake8 等开发工具的<a href="https://github.com/RSSerpent/RSSerpent/blob/master/styles/main.toml">配置</a>，希望插件开发者能够遵守。</p>
 </div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果你在执行 <code>git commit</code> 时，没有触发任何 pre-commit 钩子（也就是说，没有看到如上标记有 <em>Passed</em> 通过或 <em>Failed</em> 失败的若干行检查），你可以运行 <code>pre-commit install -t pre-commit -t commit-msg</code> 来手动安装 pre-commit 钩子。</p>
+</div>
                 
                   
                     
@@ -1011,7 +961,7 @@ Lint.....................................................................Passed
 <div class="md-source-date">
   <small>
     
-      最后更新: 2021-10-07
+      最后更新: 2021-10-09
     
   </small>
 </div>
