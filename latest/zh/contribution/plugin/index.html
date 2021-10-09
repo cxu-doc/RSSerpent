@@ -243,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../usage/rss/" class="md-tabs__link">
+      <a href="../../usage/" class="md-tabs__link">
         使用
       </a>
     </li>
@@ -277,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../environment/" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         贡献
       </a>
     </li>
@@ -293,7 +293,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../plugin/official/" class="md-tabs__link">
+      <a href="../../plugin/" class="md-tabs__link">
         插件
       </a>
     </li>
@@ -455,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/rss/" class="md-nav__link">
+      <a href="../../usage/" class="md-nav__link">
         认识 RSS
       </a>
     </li>
@@ -637,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         环境
       </a>
     </li>
@@ -767,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/official/" class="md-nav__link">
+      <a href="../../plugin/" class="md-nav__link">
         官方
       </a>
     </li>
@@ -845,6 +845,11 @@
                 
                 
                 <h1 id="插件">插件<a class="headerlink" href="#插件" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请确保你此前已阅读过<a href="environment.md">环境</a>。</p>
+</div>
+<p>通过阅读本教程，你将学会如何从头搭建一个 RSSerpent 插件项目。</p>
 <h2 id="搭建项目">搭建项目<a class="headerlink" href="#搭建项目" title="Permanent link">&para;</a></h2>
 <p>首先，你需要安装 <a href="https://cookiecutter.readthedocs.io/en/stable/installation.html">cookiecutter</a>，以便能使用官方插件<a href="https://github.com/RSSerpent/template">模板</a>来快速搭建一个 RSSerpent 插件项目。</p>
 <div class="highlight"><pre><span></span><code>pip install --user cookiecutter
@@ -930,7 +935,7 @@ git push origin
 <p class="admonition-title">Note</p>
 <p>提交信息（commit message）应该遵循 <a href="https://www.conventionalcommits.org/">Conventional Commits</a> 规范。</p>
 </div>
-<p>当你运行 <code>git commit</code> 提交时，你会自动触发一系列 <code>pre-commit</code> 钩子，这些钩子会对你的代码等进行检查。请确保你将改动推送到 GitHub 前已成功通过所有检查。你也可以执行如下命令来手动进行检查：</p>
+<p>当你运行 <code>git commit</code> 提交时，你会自动触发一系列 pre-commit 钩子，这些钩子会对你的代码等进行检查。请确保你将改动推送到 GitHub 前已成功通过所有检查。你也可以执行如下命令来手动进行检查：</p>
 <div class="highlight"><pre><span></span><code>➜ pre-commit run --all-files
 Nitpick Check............................................................Passed
 Fix End of Files.........................................................Passed
@@ -946,7 +951,7 @@ Lint.....................................................................Passed
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>我们在 <code>pre-commit</code> 钩子中运行了 <a href="https://github.com/psf/black">black</a>/<a href="https://github.com/pycqa/isort">isort</a> 代码格式化, <a href="https://github.com/python/mypy">mypy</a> 类型检查，以及 <a href="https://github.com/PyCQA/flake8">flake8</a> 代码风格检查。
+<p>我们在 pre-commit 钩子中运行了 <a href="https://github.com/psf/black">black</a>/<a href="https://github.com/pycqa/isort">isort</a> 代码格式化, <a href="https://github.com/python/mypy">mypy</a> 类型检查，以及 <a href="https://github.com/PyCQA/flake8">flake8</a> 代码风格检查。
 我们还运行了 <a href="https://github.com/andreoliwa/nitpick"><strong>nitpick</strong></a> 这个钩子：它包含了一系列 RSSerpent 官方推荐的 black/isort/mypy/flake8 等开发工具的<a href="https://github.com/RSSerpent/RSSerpent/blob/master/styles/main.toml">配置</a>，希望插件开发者能够遵守。</p>
 </div>
 <div class="admonition warning">
@@ -1006,7 +1011,7 @@ Lint.....................................................................Passed
       
       
         
-        <a href="../../plugin/official/" class="md-footer__link md-footer__link--next" aria-label="下一页: 官方" rel="next">
+        <a href="../../plugin/" class="md-footer__link md-footer__link--next" aria-label="下一页: 官方" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">

@@ -243,7 +243,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../usage/rss/" class="md-tabs__link">
+      <a href="../../usage/" class="md-tabs__link">
         Usage
       </a>
     </li>
@@ -277,7 +277,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../environment/" class="md-tabs__link md-tabs__link--active">
+      <a href="../" class="md-tabs__link md-tabs__link--active">
         Contribution
       </a>
     </li>
@@ -293,7 +293,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../plugin/official/" class="md-tabs__link">
+      <a href="../../plugin/" class="md-tabs__link">
         Plugin
       </a>
     </li>
@@ -455,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../usage/rss/" class="md-nav__link">
+      <a href="../../usage/" class="md-nav__link">
         What is RSS?
       </a>
     </li>
@@ -637,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../environment/" class="md-nav__link">
+      <a href="../" class="md-nav__link">
         Environment
       </a>
     </li>
@@ -767,7 +767,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../plugin/official/" class="md-nav__link">
+      <a href="../../plugin/" class="md-nav__link">
         Official
       </a>
     </li>
@@ -845,6 +845,11 @@
                 
                 
                 <h1 id="plugin">Plugin<a class="headerlink" href="#plugin" title="Permanent link">&para;</a></h1>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Make sure you have read <a href="environment.md">Environment</a> before continuing.</p>
+</div>
+<p>Learn to create a RSSerpent plugin project from scratch through this tutorial.</p>
 <h2 id="scaffold">Scaffold<a class="headerlink" href="#scaffold" title="Permanent link">&para;</a></h2>
 <p>You will need <a href="https://cookiecutter.readthedocs.io/en/stable/installation.html">cookiecutter</a> for quickly scaffolding an RSSerpent plugin, by using the official plugin <a href="https://github.com/RSSerpent/template">template</a>.</p>
 <div class="highlight"><pre><span></span><code>pip install --user cookiecutter
@@ -930,7 +935,7 @@ git push origin
 <p class="admonition-title">Note</p>
 <p>Commit messages should be in accordance with the <a href="https://www.conventionalcommits.org/">Conventional Commits</a> specification.</p>
 </div>
-<p>When you run <code>git commit</code>, a set of <code>pre-commit</code> hooks will be triggered. Make sure you pass the checks before actually pushing to GitHub. You could also run the checks manually:</p>
+<p>When you run <code>git commit</code>, a set of pre-commit hooks will be triggered. Make sure you pass the checks before actually pushing to GitHub. You could also run the checks manually:</p>
 <div class="highlight"><pre><span></span><code>➜ pre-commit run --all-files
 Nitpick Check............................................................Passed
 Fix End of Files.........................................................Passed
@@ -946,12 +951,12 @@ Lint.....................................................................Passed
 </code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>In <code>pre-commit</code> hooks we run <a href="https://github.com/psf/black">black</a>, <a href="https://github.com/pycqa/isort">isort</a> for source code formatting, <a href="https://github.com/python/mypy">mypy</a> for type checking, and <a href="https://github.com/PyCQA/flake8">flake8</a> for linting.
+<p>In pre-commit hooks we run <a href="https://github.com/psf/black">black</a>, <a href="https://github.com/pycqa/isort">isort</a> for source code formatting, <a href="https://github.com/python/mypy">mypy</a> for type checking, and <a href="https://github.com/PyCQA/flake8">flake8</a> for linting.
 We also run <a href="https://github.com/andreoliwa/nitpick"><strong>nitpick</strong></a>, which contains a set of recommended <a href="https://github.com/RSSerpent/RSSerpent/blob/master/styles/main.toml">configurations</a> for black/isort/mypy/flake8 etc from the upstream.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If no pre-commit hooks are triggered (that's to say, you didn't lines of checks marked with either <em>Passed</em> or <em>Failed</em>, as shown above) when you do <code>git commit</code>, you can manually install the pre-commit hooks with <code>pre-commit install -t pre-commit -t commit-msg</code>.</p>
+<p>If no pre-commit hooks are triggered (that's to say, you didn't see lines of checks marked with either <em>Passed</em> or <em>Failed</em>, as shown above) when you do <code>git commit</code>, you can manually install the pre-commit hooks with <code>pre-commit install -t pre-commit -t commit-msg</code>.</p>
 </div>
                 
                   
@@ -1006,7 +1011,7 @@ We also run <a href="https://github.com/andreoliwa/nitpick"><strong>nitpick</str
       
       
         
-        <a href="../../plugin/official/" class="md-footer__link md-footer__link--next" aria-label="Next: Official" rel="next">
+        <a href="../../plugin/" class="md-footer__link md-footer__link--next" aria-label="Next: Official" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
